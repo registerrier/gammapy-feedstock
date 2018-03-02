@@ -1,7 +1,7 @@
 About gammapy
 =============
 
-Home: https://github.com/gammapy/gammapy
+Home: http://gammapy.org/
 
 Package license: BSD 3-Clause
 
@@ -9,11 +9,9 @@ Feedstock license: BSD 3-Clause
 
 Summary: A Python package for gamma-ray astronomy
 
-Gammapy is an in-development affiliated package of Astropy  that builds on
-the core scientific Python stack to provide tools to simulate and analyse
-the gamma-ray sky for telescopes such as CTA, H.E.S.S., and Fermi. Gammapy
-is a place for Python-coding gamma-ray astronomers to share their code and
-collaborate. Contributions welcome!
+Gammapy is an open-source Python package for gamma-ray astronomy built on Numpy and Astropy.
+It is a prototype for the Cherenkov Telescope Array (CTA) science tools,
+and can also be used to analyse data from existing gamma-ray telescopes.
 
 
 Current build status
@@ -71,6 +69,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
