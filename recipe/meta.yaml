@@ -33,11 +33,13 @@ test:
   imports:
     - gammapy
     - gammapy.astro
+    - gammapy.astro.darkmatter
     - gammapy.astro.population
     - gammapy.astro.source
     - gammapy.background
     - gammapy.catalog
     - gammapy.cube
+    - gammapy.cube.models
     - gammapy.data
     - gammapy.datasets
     - gammapy.detect
@@ -48,13 +50,14 @@ test:
     - gammapy.maps
     - gammapy.scripts
     - gammapy.spectrum
+    - gammapy.spectrum.models
     - gammapy.stats
     - gammapy.time
     - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
     - gammapy.utils.distributions
-    - gammapy.utils.root
+    - gammapy.utils.fitting
   commands:
     - gammapy --help
 
