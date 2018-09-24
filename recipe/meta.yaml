@@ -1,7 +1,7 @@
 {% set name = "gammapy" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "f30eef6efefb2829d55ceb4bab547011ae1e9fa0434cb5ab6042e4156f1ec6da" %}
+{% set hash_value = "f1d62d3d0c52851bf4b771842f21ea1971c6bd1d822e4086832c835cc893fbe6" %}
 
 package:
   name: '{{ name|lower }}'
@@ -33,11 +33,13 @@ test:
   imports:
     - gammapy
     - gammapy.astro
+    - gammapy.astro.darkmatter
     - gammapy.astro.population
     - gammapy.astro.source
     - gammapy.background
     - gammapy.catalog
     - gammapy.cube
+    - gammapy.cube.models
     - gammapy.data
     - gammapy.datasets
     - gammapy.detect
@@ -48,13 +50,14 @@ test:
     - gammapy.maps
     - gammapy.scripts
     - gammapy.spectrum
+    - gammapy.spectrum.models
     - gammapy.stats
     - gammapy.time
     - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
     - gammapy.utils.distributions
-    - gammapy.utils.root
+    - gammapy.utils.fitting
   commands:
     - gammapy --help
 
