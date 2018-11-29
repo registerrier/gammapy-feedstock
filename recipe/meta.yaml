@@ -23,11 +23,12 @@ requirements:
   host:
     - python
     - setuptools
-    - astropy >=1.3
+    - astropy >=2.0
   run:
     - python
     - numpy >=1.8
-    - astropy >=1.3
+    - scipy
+    - astropy >=2.0
     - regions
     - click
 
@@ -64,7 +65,7 @@ test:
     - gammapy --help
 
 about:
-  home: http://gammapy.org/
+  home: https://gammapy.org/
   license: BSD 3-Clause
   license_family: BSD
   license_file: licenses/LICENSE.rst
@@ -73,7 +74,7 @@ about:
     Gammapy is an open-source Python package for gamma-ray astronomy built on Numpy and Astropy. 
     It is a prototype for the Cherenkov Telescope Array (CTA) science tools,
     and can also be used to analyse data from existing gamma-ray telescopes.
-  doc_url: http://docs.gammapy.org/
+  doc_url: https://docs.gammapy.org/
   dev_url: https://github.com/gammapy/gammapy
 
 extra:
