@@ -1,7 +1,7 @@
 {% set name = "gammapy" %}
-{% set version = "0.9" %}
+{% set version = "0.10" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "fa893a0c99496fafb865084795585ae4d55a1574b365cb7a5e6ba2c91b2cdc02" %}
+{% set hash_value = "c546f2d5f397fd6958b7e2065bbf05f6c2afd2f257bcef30c15472ce4c4a47db" %}
 
 package:
   name: '{{ name|lower }}'
@@ -12,7 +12,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 1000
+  number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: python setup.py install --offline --single-version-externally-managed --record=record.txt
@@ -31,6 +31,7 @@ requirements:
     - astropy >=2.0
     - regions
     - click
+    - pyyaml
 
 test:
   imports:
