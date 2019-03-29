@@ -45,7 +45,6 @@ test:
     - gammapy.cube
     - gammapy.cube.models
     - gammapy.data
-    - gammapy.datasets
     - gammapy.detect
     - gammapy.extern
     - gammapy.image
