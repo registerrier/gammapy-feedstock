@@ -13,6 +13,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [py27]
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: python setup.py install --offline --single-version-externally-managed --record=record.txt
