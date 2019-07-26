@@ -60,7 +60,7 @@ test:
     - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
-    - gammapy.utils.distributions
+    - gammapy.utils.random
     - gammapy.utils.fitting
   commands:
     - gammapy --help
