@@ -1,7 +1,7 @@
 {% set name = "gammapy" %}
-{% set version = "0.12" %}
+{% set version = "0.13" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "0db2e11acc3fd7bac6599b9d1421d7bf264a8d14e87334b549fa3b2c0e6992bf" %}
+{% set hash_value = "e0d3135c4ac9e68f3f57862c56285c59477889a4d9b3b7e85ab1dcf31dab169b" %}
 
 package:
   name: '{{ name|lower }}'
@@ -60,7 +60,7 @@ test:
     - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
-    - gammapy.utils.distributions
+    - gammapy.utils.random
     - gammapy.utils.fitting
   commands:
     - gammapy --help
