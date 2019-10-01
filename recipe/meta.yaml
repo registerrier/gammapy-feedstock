@@ -41,27 +41,22 @@ test:
     - gammapy.astro.darkmatter
     - gammapy.astro.population
     - gammapy.astro.source
-    - gammapy.background
     - gammapy.catalog
     - gammapy.cube
-    - gammapy.cube.models
     - gammapy.data
     - gammapy.detect
     - gammapy.extern
-    - gammapy.image
-    - gammapy.image.models
     - gammapy.irf
     - gammapy.maps
+    - gammapy.modeling
+    - gammapy.modeling.models
     - gammapy.scripts
     - gammapy.spectrum
-    - gammapy.spectrum.models
     - gammapy.stats
     - gammapy.time
-    - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
     - gammapy.utils.random
-    - gammapy.utils.fitting
   commands:
     - gammapy --help
 
