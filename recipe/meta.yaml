@@ -13,7 +13,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [py27]
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: python setup.py install --offline --single-version-externally-managed --record=record.txt
@@ -22,17 +21,18 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python
+    - python >=3.6
     - setuptools
-    - astropy >=2.0
+    - astropy >=3.2
   run:
-    - python
-    - numpy >=1.8
-    - scipy
-    - astropy >=2.0
-    - regions
-    - click
-    - pyyaml
+    - python >=3.6
+    - numpy >=1.16
+    - scipy >=1.2
+    - astropy >=3.2
+    - regions >=0.4
+    - click >=7.0
+    - pyyaml >=5.1
+    - jsonschema >=3.0
 
 test:
   imports:
