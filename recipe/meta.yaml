@@ -15,7 +15,7 @@ build:
   number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
-  script: python setup.py install --offline --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -23,10 +23,13 @@ requirements:
   host:
     - python >=3.6
     - setuptools
+    - pip
+    - cython
+    - numpy >=1.16
     - astropy >=3.2
   run:
     - python >=3.6
-    - numpy >=1.16
+    - {{ pin_compatible('numpy') }}
     - scipy >=1.2
     - astropy >=3.2
     - regions >=0.4
@@ -45,7 +48,6 @@ test:
     - gammapy.cube
     - gammapy.data
     - gammapy.detect
-    - gammapy.extern
     - gammapy.irf
     - gammapy.maps
     - gammapy.modeling
