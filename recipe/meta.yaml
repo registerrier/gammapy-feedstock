@@ -21,7 +21,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.6
+    - python
     - setuptools
     - setuptools_scm
     - pip
