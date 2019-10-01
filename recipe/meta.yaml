@@ -1,7 +1,7 @@
 {% set name = "gammapy" %}
-{% set version = "0.13" %}
+{% set version = "0.14" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e0d3135c4ac9e68f3f57862c56285c59477889a4d9b3b7e85ab1dcf31dab169b" %}
+{% set hash_value = "819565824ca67cf657154a458bf6fcddfb67e49494c87cc32aef9eb360f7fd9c" %}
 
 package:
   name: '{{ name|lower }}'
@@ -13,10 +13,9 @@ source:
 
 build:
   number: 0
-  skip: true  # [py27]
   entry_points:
     - gammapy = gammapy.scripts.main:cli
-  script: python setup.py install --offline --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -24,15 +23,20 @@ requirements:
   host:
     - python
     - setuptools
-    - astropy >=2.0
+    - setuptools_scm
+    - pip
+    - cython
+    - numpy >=1.16
+    - astropy >=3.2
   run:
-    - python
-    - numpy >=1.8
-    - scipy
-    - astropy >=2.0
-    - regions
-    - click
-    - pyyaml
+    - python >=3.6
+    - {{ pin_compatible('numpy') }}
+    - scipy >=1.2
+    - astropy >=3.2
+    - regions >=0.4
+    - click >=7.0
+    - pyyaml >=5.1
+    - jsonschema >=3.0
 
 test:
   imports:
@@ -41,27 +45,21 @@ test:
     - gammapy.astro.darkmatter
     - gammapy.astro.population
     - gammapy.astro.source
-    - gammapy.background
     - gammapy.catalog
     - gammapy.cube
-    - gammapy.cube.models
     - gammapy.data
     - gammapy.detect
-    - gammapy.extern
-    - gammapy.image
-    - gammapy.image.models
     - gammapy.irf
     - gammapy.maps
+    - gammapy.modeling
+    - gammapy.modeling.models
     - gammapy.scripts
     - gammapy.spectrum
-    - gammapy.spectrum.models
     - gammapy.stats
     - gammapy.time
-    - gammapy.time.models
     - gammapy.utils
     - gammapy.utils.coordinates
     - gammapy.utils.random
-    - gammapy.utils.fitting
   commands:
     - gammapy --help
 
