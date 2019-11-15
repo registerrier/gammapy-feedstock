@@ -16,7 +16,7 @@ build:
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True # [py2k]
+  skip: True  # [py2k]
 
 requirements:
   build:
