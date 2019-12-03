@@ -1,7 +1,7 @@
 {% set name = "gammapy" %}
-{% set version = "0.14" %}
+{% set version = "0.15" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "819565824ca67cf657154a458bf6fcddfb67e49494c87cc32aef9eb360f7fd9c" %}
+{% set hash_value = "fe4c2bef8e5cba09361d58c5caa8b1ad92cc7ded5afb33c52a55493d7ab46c28" %}
 
 package:
   name: '{{ name|lower }}'
