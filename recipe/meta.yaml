@@ -37,11 +37,12 @@ requirements:
     - regions >=0.4
     - click >=7.0
     - pyyaml >=5.1
-    - jsonschema >=3.0
+    - pydantic >=1.0
 
 test:
   imports:
     - gammapy
+    - gammapy.analysis
     - gammapy.astro
     - gammapy.astro.darkmatter
     - gammapy.astro.population
