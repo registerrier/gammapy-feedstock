@@ -23,7 +23,6 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
     - setuptools_scm
     - pip
     - cython
@@ -31,6 +30,7 @@ requirements:
     - astropy >=3.2
   run:
     - python
+    - setuptools
     - {{ pin_compatible('numpy') }}
     - scipy >=1.2
     - astropy >=3.2
