@@ -1,22 +1,20 @@
 {% set name = "gammapy" %}
-{% set version = "0.16" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "b3c722401c70f69821d82f000be957b28fb266ff2ec3eda2f8021972efdb52df" %}
+{% set version = "0.17" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  sha256: 72241e3351b73457ca0633690e62e42af1f048536ebc6ce3ce296bbf57de6c54
 
 build:
   number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [py2k]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py2k]
 
 requirements:
   build:
