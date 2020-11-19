@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "0.18.1" %}
+{% set version = "0.18.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 68903dfe51de4709c02a4b3851793fab2137a1a1d4834abceafc2510b577860c
+  sha256: ae496b792e18611184626c728cf2e7fd713b6b53d7294c384ab39f40bac944e1
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
