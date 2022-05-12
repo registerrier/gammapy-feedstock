@@ -25,7 +25,7 @@ requirements:
   host:
     - python
     - setuptools_scm >=6.2
-    - pip
+    - pip <22.1
     - cython
     - numpy
   run:
