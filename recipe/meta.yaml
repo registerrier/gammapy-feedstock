@@ -24,7 +24,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools_scm
+    - setuptools_scm >=6.2
     - pip
     - cython
     - numpy
