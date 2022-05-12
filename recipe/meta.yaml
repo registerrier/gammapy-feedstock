@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "0.19" %}
+{% set version = "0.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5099e3a08c5115d278ef53e37d4b2827343f96ea7a410b0d2d3bc1891eb54fd
+  sha256: f115af5ee2286aec9b6d927281417414898274f5f1eae0f9bfdcabc5cf726355
 
 build:
   number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py2k]
+  skip: true  # [py<=37]
 
 requirements:
   build:
@@ -24,20 +24,22 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools_scm
-    - pip
+    - setuptools_scm >=6.2
+    - pip <22.1
     - cython
     - numpy
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
-    - scipy >=1.2
-    - astropy >=4.1
+    - {{ pin_compatible("numpy") }}
+    - scipy >=1.4
+    - astropy >=5.0
     - regions >=0.5
     - click >=7.0
     - pyyaml >=5.1
-    - pydantic >=1.2
+    - pydantic >=1.4
+    - iminuit >=2.8.0
+    - matplotlib >=3.4
 
 test:
   imports:
@@ -65,7 +67,7 @@ about:
   home: https://gammapy.org/
   license: BSD-3-Clause
   license_family: BSD
-  license_file: licenses/LICENSE.rst
+  license_file: LICENSE.rst
   summary: A Python package for gamma-ray astronomy
   description: |
     Gammapy is an open-source Python package for gamma-ray astronomy built on Numpy and Astropy.
