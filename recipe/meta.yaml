@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "0.20" %}
+{% set version = "0.20.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f115af5ee2286aec9b6d927281417414898274f5f1eae0f9bfdcabc5cf726355
+  sha256: 804eab4b475eaa51c4149dc17deb2e53fc5a285968c06d092bc2c304c8f1ea79
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
   host:
     - python
     - setuptools_scm >=6.2
-    - pip <22.1
+    - pip !=22.1
     - cython
     - numpy
   run:
