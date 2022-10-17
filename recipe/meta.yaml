@@ -39,7 +39,7 @@ requirements:
     - pyyaml >=5.1
     - pydantic >=1.4
     - iminuit >=2.8.0
-    - matplotlib >=3.4
+    - matplotlib-base >=3.4
 
 test:
   imports:
