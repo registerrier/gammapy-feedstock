@@ -10,7 +10,7 @@ source:
   sha256: 804eab4b475eaa51c4149dc17deb2e53fc5a285968c06d092bc2c304c8f1ea79
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
