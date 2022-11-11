@@ -25,9 +25,11 @@ requirements:
   host:
     - python
     - setuptools_scm >=6.2
+    - setuptools
     - pip !=22.1
     - cython
     - numpy
+    - extension-helpers
   run:
     - python
     - setuptools
