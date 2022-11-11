@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "0.20.1" %}
+{% set version = "1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 804eab4b475eaa51c4149dc17deb2e53fc5a285968c06d092bc2c304c8f1ea79
+  sha256: 1b0969422601f35a6ed07822536e152a74d5b870f00a8155f32dae9d77907df0
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -25,9 +25,11 @@ requirements:
   host:
     - python
     - setuptools_scm >=6.2
+    - setuptools
     - pip !=22.1
     - cython
     - numpy
+    - extension-helpers
   run:
     - python
     - setuptools
