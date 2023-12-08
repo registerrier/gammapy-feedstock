@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 664c914f6474208ab98f389f64a695ed633e156d9fe1ec178168e1610ee34a2d
+  sha256: 60e537ec23f90d435710263bf512e593081025ce27d15e60bd83cb5447552c5b
 
 build:
   number: 0
@@ -34,12 +34,12 @@ requirements:
     - python
     - setuptools
     - {{ pin_compatible("numpy") }}
-    - scipy >=1.5
+    - scipy >=1.5,!=1.10
     - astropy >=5.0
     - regions >=0.5
     - click >=7.0
     - pyyaml >=5.3
-    - pydantic >=1.4
+    - pydantic >=1.4,<2.0
     - iminuit >=2.8.0
     - matplotlib-base >=3.4
 
