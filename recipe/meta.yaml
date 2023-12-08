@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "0.20.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 804eab4b475eaa51c4149dc17deb2e53fc5a285968c06d092bc2c304c8f1ea79
+  sha256: 60e537ec23f90d435710263bf512e593081025ce27d15e60bd83cb5447552c5b
 
 build:
   number: 0
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<=37]
+  skip: true  # [py<=38]
 
 requirements:
   build:
@@ -32,12 +32,12 @@ requirements:
     - python
     - setuptools
     - {{ pin_compatible("numpy") }}
-    - scipy >=1.4
+    - scipy >=1.5,!=1.10
     - astropy >=5.0
     - regions >=0.5
     - click >=7.0
-    - pyyaml >=5.1
-    - pydantic >=1.4
+    - pyyaml >=5.3
+    - pydantic >=1.4,<2.0
     - iminuit >=2.8.0
     - matplotlib >=3.4
 
