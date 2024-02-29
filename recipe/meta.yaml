@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "1.0.2" %}
+{% set version = "1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 60e537ec23f90d435710263bf512e593081025ce27d15e60bd83cb5447552c5b
+  sha256: b853362299efee8ba6cdcb66d92affb20b6f331e203728149281a89e44a6ae36
 
 build:
   number: 0
@@ -39,7 +39,7 @@ requirements:
     - regions >=0.5
     - click >=7.0
     - pyyaml >=5.3
-    - pydantic >=1.4,<2.0
+    - pydantic >=2.5
     - iminuit >=2.8.0
     - matplotlib-base >=3.4
 
